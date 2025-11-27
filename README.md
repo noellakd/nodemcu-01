@@ -1,6 +1,6 @@
 # nodemcu-01
 
-# Blinkprogram med Mikroprocessor
+# Blinkprogram med NodeMCU
 
 ## Översikt
 Det klassiska "Blinkprogrammet" är ofta det första steget när man lär sig programmera en mikrokontroller. Programmet får en LED lampa att blinka med jämna intervall som indikerar att blinkprogrammet man skapat på datorn i Arduino fungerar.
