@@ -6,22 +6,32 @@ Det klassiska **Blinkprogrammet** är ofta det första steget när man lär sig 
 ## Mikroprocessor
 NodeMCU bygger på **ESP8266**, en liten och billig WiFi‑mikroprocessor. Den används ofta i IoT‑projekt (Internet of Things) och kan programmeras via Arduino IDE, ett program med öppen källkod.
 
-## De två basfunktionerna i Arduino
-- **setup()** – körs en gång när mikrokontrollern startar eller resetas.
-- **loop()** – körs om och om igen i en evig loop så länge mikrokontrollern är på.
-
 ## Hämta blinkprogram
 Blinkprogrammet finns i Arduino IDE under:  
 `File` → `Examples` → `01.Basics` → `Blink`
+
+## De två basfunktionerna i Arduino
+- **setup()** – körs en gång när mikrokontrollern startar eller resetas.
+- **loop()** – körs om och om igen i en evig loop så länge mikrokontrollern är på.
 
 ## Setup och Loop (Strukturfunktioner)
 - I **setup()** anger vi vilken port som ska användas.  
 - I **loop()** bestämmer vi hur ofta lampan ska blinka.
 
 ```cpp
-digitalWrite(ledPin, HIGH); // HIGH tänder LED lampan
-digitalWrite(ledPin, LOW);  // LOW släcker LED lampan
-delay(1000);                // Hur lång intervall mellan blinkningar (I detta fallet 1000ms)
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+```
+
+```cpp
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);  // HIGH tänder LED lampan
+  delay(1000);                       // Hur lång intervall mellan blinkningar (I detta fallet 1000ms)
+  digitalWrite(LED_BUILTIN, LOW);   // turn the LED off by making the voltage LOW
+  delay(1000);                       // Hur lång intervall mellan blinkningar (I detta fallet 1000ms)
+}
 
 ```
 
